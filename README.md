@@ -15,9 +15,15 @@ Update this repository to use typescript, and describe the advantages and trade-
 
 # Exercice 5
 Create a post (/guests) api endpoint that accepts an array of objects with the following properties:
+- email: string
 - name: string
 - age: number
 - isVIP: boolean
 
-As response, the array is filtered out with VIP and adults only, sorted by age.
-an id is also provided to each guest (the id is the index/order and the 3 first letters of the name)
+As response, the array is filtered out with VIP and adults only, sorted by age (asc).
+an id is also provided to each guest (the id is the array position index concactenated with the 3 first letters of the name)
+
+# Exercice 6
+Enrich the response by providing the avatar url.
+To fetch the avatar url, an external API is used: 
+https://reqres.in/api/users?page=1
