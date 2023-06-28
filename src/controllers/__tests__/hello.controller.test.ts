@@ -1,10 +1,10 @@
-const request = require('supertest');
-const express = require('express');
-const routes = require('../../routes/router');
+import express, { Request, Response } from "express";
+import { router } from "../../routes/router";
+import request from 'supertest';
 
 const app = express();
 app.use(express.json());
-app.use('/api/v1', routes);
+app.use('/api/v1', router);
 
 describe('GET /api/v1/hello', () => {
   it('should respond with "Hello unknown !" when no name query parameter is provided', async () => {
